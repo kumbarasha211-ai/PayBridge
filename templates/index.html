@@ -1,0 +1,133 @@
+
+{% extends "base.html" %}
+
+{% block title %}PayBridge | Home{% endblock %}
+
+{% block content %}
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <span class="eyebrow">PAYMENT MANAGEMENT PLATFORM</span>
+
+        <h1>
+            Payments made simple.<br>
+            <span>Security built in.</span>
+        </h1>
+
+        <p>
+            Explore how a payment gateway validates payment information,
+            evaluates transaction risk, and records payment results
+            through an interactive educational experience.
+        </p>
+
+        <div class="hero-actions">
+
+            <a class="btn btn-primary" href="{{ url_for('payment') }}">
+                Get Started
+            </a>
+
+            <a class="btn btn-secondary" href="{{ url_for('admin') }}">
+                View Dashboard
+            </a>
+
+        </div>
+
+        <div class="trust-row">
+            <span>✓ Input Validation</span>
+            <span>✓ Transaction History</span>
+            <span>✓ Risk Assessment</span>
+        </div>
+
+    </div>
+
+    <div class="hero-card">
+
+        <div class="hero-card-top">
+            <span class="brand-mark">P</span>
+            <span class="live-label">PAYBRIDGE</span>
+        </div>
+
+        <p class="muted">Transaction Overview</p>
+
+        <h2>₹1,000.00</h2>
+
+        <div class="demo-card-number">
+            •••• &nbsp; •••• &nbsp; •••• &nbsp; 1111
+        </div>
+
+        <div class="hero-card-bottom">
+
+            <div>
+                <small>PAYMENT STATUS</small>
+                <strong>Ready to process</strong>
+            </div>
+
+            <span class="status-pill approved">READY</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="feature-grid">
+
+    <article class="feature-card">
+
+        <span class="feature-icon">↗</span>
+
+        <h3>Payment Processing</h3>
+
+        <p>
+            Explore the payment workflow and view transaction outcomes
+            in this educational application.
+        </p>
+
+    </article>
+
+
+    <article class="feature-card">
+
+        <span class="feature-icon">▦</span>
+
+        <h3>Transaction Records</h3>
+
+        <p>
+            Review transaction history and track payment status
+            using the local database.
+        </p>
+
+    </article>
+
+
+    <article class="feature-card">
+
+        <span class="feature-icon">⌁</span>
+
+        <h3>Risk Assessment</h3>
+
+        <p>
+            Understand how basic risk-scoring rules evaluate
+            transactions within the application.
+        </p>
+
+    </article>
+
+</section>
+
+
+<div class="notice">
+
+    <strong>Important Notice:</strong>
+
+    PayBridge is an educational project that simulates payment
+    workflows. It is not connected to banks or payment networks
+    and does not process real payments. Use fictional payment
+    details only.
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="PayBridge — Payment Management System">
+
+    <title>{% block title %}PayBridge | Payment Management{% endblock %}</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <header class="site-header">
+
+        <a href="{{ url_for('index') }}" class="brand">
+            <span class="brand-mark">P</span>
+            <span>PayBridge</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('payment') }}">Payments</a>
+            <a href="{{ url_for('transactions') }}">Transactions</a>
+            <a href="{{ url_for('admin') }}">Dashboard</a>
+        </nav>
+
+    </header>
+
+    <main class="page-container">
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="flash {{ category }}" role="status">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        {% block content %}{% endblock %}
+
+    </main>
+
+    <footer class="site-footer">
+        <p>
+            <strong>PayBridge</strong>
+            <span>· Payment Management System</span>
+        </p>
+
+        <p>
+            Academic project for payment workflow simulation.
+            No real payments are processed.
+        </p>
+    </footer>
+
+</body>
+</html>
